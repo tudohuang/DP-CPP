@@ -1,5 +1,5 @@
 /************
-https://judge.tcirc.tw/ShowProblem?problemid=d067
+ref: https://judge.tcirc.tw/ShowProblem?problemid=d067
 楊鐵心帶著義女穆念慈當街頭的武術表演者，他接到許多的邀約，每天均有一場。每一場表演都可以得到某些金額的報酬，但是武術表演很辛苦，無法連續兩天都進行表演，
 
 請你寫一支程式協助他決定應該接受那些表演以得到最大的報酬。
