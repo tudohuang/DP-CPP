@@ -25,35 +25,33 @@ n≤1e5 ，每天酬勞不超過 10000 。
 範例輸出 #2
 18
 *************/
-#include<bits/stdc++.h>
-#define ct cout 
-#define cn cin
-#define import(std) using namespace std;
-#define it int
-#define fl float
-#define dl doule
-#define ch char
-#define ll long
-#define rep(i,n) for(int i;i<n;i++)
-#define elif else if
-#define main int main()
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
-import(std)
-main {
-    it n,a;
-    cn >> n;
+int main() {
+    int n;
+    cin >> n;
     vector<int> cost(n + 1);
     vector<int> dp(n + 1);
-    for(int i=1;i<=n;i++){
-    	cn>>cost[i];
-	}
-	dp[0] = 0;
-    dp[1] = cost[1];
-	for(int i = 2; i <= n; ++i) {
+
+    // 讀入每天的報酬
+    for(int i = 1; i <= n; ++i) {
+        cin >> cost[i];
+    }
+
+    // 初始化 dp 陣列
+    dp[0] = 0;
+    dp[1] = cost[1]; 
+
+    // 計算最大收入
+    for(int i = 2; i <= n; ++i) {
         dp[i] = max(dp[i - 1], dp[i - 2] + cost[i]);
     }
 
-    cout << dp[n]<< endl;
-
+    // 輸出最大可能獲得的總酬勞
+    cout << dp[n] << endl; 
     return 0;
 }
+
